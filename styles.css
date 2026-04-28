@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Saira:wght@700&display=swap');
+:root{
+    --primary-color: #033b4a;
+    --secondary-color: #20c997;
+    --gray: #4a4a4d;
+    --bg-primary: #ecf0f3;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+::selection {
+    background-color: var(--secondary-color); 
+    color: #fff; 
+}
+
+::-moz-selection {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+h1,h2{
+    font-family: 'Saira', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* Utility Classes */
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+.text-primary{
+    color: var(--secondary-color);
+}
+
+.btn-primary{
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover{
+    background-color: #15a076;
+}
+/* Header Start */
+header{
+    background-color: var(--bg-primary);
+    height: 100vh;
+}
+header .navbar{
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+header .navbar nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    padding: 1.5rem 2rem;
+    margin: auto;
+}
+ #home #logo {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 600;
+    transition: all 0.3s ease; 
+    display: inline-block; 
+}
+
+#home #logo:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1); 
+}
+header .navbar nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .navbar nav ul a {
+    margin: 0 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    position: relative; 
+    transition: color 0.3s ease; 
+}
+header .navbar nav ul a:hover {
+    color: var(--secondary-color);
+}
+header .navbar nav ul a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0; 
+    height: 2px; 
+    background-color: var(--secondary-color); 
+    transition: width 0.3s ease; 
+}
+header .navbar nav ul a:hover::after {
+    width: 100%; 
+}
+header .navbar nav ul a{
+    margin: 0 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+header .header-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 5rem 2rem 0;
+    height: 100vh;
+}
+header .header-content .content-text{
+    margin-bottom: 5rem;
+}
+
+#home .header-content p span{
+    font-weight: 700;
+    font-size: 20px;
+}
+ #home .header-content h1 {
+    font-size: 60px;
+    margin-top: 10px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), #0a8a65);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 5s ease-in-out infinite;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+#home .header-content .title{
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 10px 0;
+    font-weight: 500;
+}
+#home .header-content .social{
+    margin: 1rem 0 2rem; 
+}
+#home .header-content .social a i{
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--gray);
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transform: all 0.3s ease;
+}
+#home .header-content .social a i:hover{
+    transform: scale(0.85);
+}
+
+header .header-content img{
+    max-width: 450px;
+}
+/* Header End */
+/* ================== About Section (Full Screen & Balanced) ================== */
+#about {
+    padding: 4rem 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    background-color: #fff; 
+}
+
+#about h2{
+    text-align: center;
+    font-size: 42px;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+#about hr{
+    width: 80px;
+    height: 4px;
+    border: none;
+    background: var(--secondary-color);
+    margin: 0 auto 4rem;
+}
+
+#about .about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 4rem;
+    align-items: start; 
+}
+
+#about .about-content .col-1 h3 {
+    font-size: 30px;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+#about .about-content .col-1 p {
+    color: var(--gray);
+    line-height: 1.8; 
+    font-size: 17px;
+    margin-bottom: 1.5rem;
+    text-align: justify; 
+}
+
+#about .about-content .col-2 {
+    background: var(--bg-primary); 
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+#about .about-content .col-2 p {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px dashed #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .about-content .col-2 p b {
+    color: var(--gray);
+    font-weight: 600;
+}
+
+#about .about-content .col-2 p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+/* ================== Skills Section (Full Screen Dark) ================== */
+#skills {
+    background-color: var(--primary-color); 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+#skills .container {
+    width: 100%;
+}
+
+#skills h2,
+#project h2{
+    color: #fff;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 0.5rem;
+}
+
+#skills hr {
+    width: 100px;
+    height: 3px;
+    border: none;
+    background: var(--secondary-color);
+    margin: 0 auto 4rem;
+}
+
+#skills .skills-content {
+    width: 100%;
+}
+
+#skills .skills-content .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px; 
+    width: 100%;
+}
+
+#skills .skills-content .row .item {
+    color: #fff;
+    background-color: #0f272d; 
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* تأثير الـ Hover */
+#skills .skills-content .row .item:hover {
+    transform: translateY(-12px);
+    background-color: #000; 
+    box-shadow: 0px 15px 30px rgba(32, 201, 151, 0.2);
+    border-color: var(--secondary-color);
+}
+
+#skills .row img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+
+#skills .item .white-logo {
+    filter: invert(1) brightness(2);
+}
+
+/* ================== Modern Projects Section (Compact & Side-by-Side) ================== */
+#project {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0; /* قللنا المسافات اللي فوق وتحت عشان نمنع السكرول */
+}
+
+#project h2 {
+    color: #fff; 
+    text-align: center;
+    font-size: 38px;
+    font-family: 'Saira', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+#project hr {
+    width: 80px;
+    height: 4px;
+    border: none;
+    background: var(--secondary-color);
+    margin: 0 auto 3rem; /* قللنا المسافة هنا كمان */
+}
+
+#project .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* السطر ده بيجبرهم دايماً يبقوا 2 جنب بعض */
+    gap: 30px; 
+    width: 100%;
+}
+
+#project .row .item {
+    background-color: #0f272d; 
+    border-radius: 15px;
+    overflow: hidden; 
+    border: 1px solid rgba(255, 255, 255, 0.05); 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+}
+
+#project .row .item:hover {
+    transform: translateY(-10px) scale(1.02); 
+    border-color: var(--secondary-color); 
+    box-shadow: 0 15px 30px rgba(32, 201, 151, 0.25); 
+}
+
+#project .row .item img {
+    width: 100%;
+    height: 220px; /* صغرنا طول الصورة عشان الكارت ميطولش الشاشة */
+    object-fit: cover; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#project .row .item .item-content {
+    padding: 1.5rem; /* لمينا المسافات جوه الكارت */
+    text-align: center;
+}
+
+#project .row .item .item-content h3 {
+    font-size: 22px;
+    color: #fff; 
+    font-weight: 700;
+    margin-bottom: 1.5rem; 
+    letter-spacing: 1px;
+}
+
+#project .row .item .item-content a {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 14px;
+    color: #fff;
+    background: transparent;
+    border: 2px solid var(--secondary-color); 
+    border-radius: 30px; 
+    font-weight: 600;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+#project .row .item .item-content a:hover {
+    background-color: var(--secondary-color); 
+    color: var(--primary-color); 
+    box-shadow: 0 5px 15px rgba(32, 201, 151, 0.4); 
+}
+
+/* ================== Contact Start ================== */
+#contact {
+    padding: 4rem 0;
+    background-color: var(--bg-primary); /* خلفية رمادية فاتحة عشان الفورم البيضا تنور */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem; 
+}
+
+/* صلحنا الغلطة المطبعية من rew لـ row */
+#contact .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; /* توسيط الصورة والفورم بالطول */
+    gap: 3rem;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* ضل ناعم واحترافي */
+    padding: 3rem;
+    border-radius: 15px;
+}
+
+/* تظبيط الصورة عشان متخرجش بره البوكس */
+#contact .row img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* تظبيط الحقول (Inputs & Textarea) */
+#contact .row input, 
+#contact .row textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px; /* مسافة بين الحقول */
+    padding: 15px;
+    background-color: #f8fcfb; /* لون خلفية خفيف جداً يريح العين */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* حواف ناعمة للحقول */
+    outline: none;
+    font-family: inherit; /* عشان ياخد نفس خط الموقع */
+    transition: all 0.3s ease;
+}
+
+/* منع تغيير حجم مربع الرسالة عشان ميبوظش التصميم */
+#contact .row textarea {
+    resize: none;
+}
+
+/* تأثير لما تضغط جوه الحقل عشان تكتب */
+#contact .row input:focus, 
+#contact .row textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(32, 201, 151, 0.2);
+}
+
+/* تظبيط زرار الإرسال */
+#contact .row .btn-primary {
+    width: 100%; /* الزرار ياخد العرض كله */
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+/* ================== Contact End ================== */
+/* ================== Footer Start ================== */
+#footer {
+    background-color: var(--primary-color); /* استخدمنا الكحلي بتاع الموقع */
+    color: #fff;
+    padding: 1.5rem 0; /* كبرنا المسافة سنة بسيطة */
+    text-align: center;
+    border-top: 3px solid var(--secondary-color); /* خط أخضر شيك بيفصل الفوتر عن باقي الموقع */
+}
+
+#footer p {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+#footer p i {
+    margin: 0 5px; /* مسافة حوالين القلب */
+}
+/* ================== Footer End ================== */
+
+/* Tablet Responsive */
+/* ==========================================================
+   Media Queries (Responsive Design) - التجاوب مع كل الشاشات
+   ========================================================== */
+
+/* ----------------------------------------------------
+   1. الشاشات المتوسطة (التابلت والشاشات الأقل من 991 بكسل) 
+   ---------------------------------------------------- */
+@media (max-width: 991px) {
+    /* --- الهيدر (حل مشكلة تداخل الصورة مع الـ About) --- */
+    header,
+    header .header-content {
+        height: auto;
+        min-height: 100vh; 
+    }
+    header .header-content {
+        grid-template-columns: 1fr; /* الكلام والصورة تحت بعض */
+        text-align: center;
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+    }
+    header .header-content .content-text {
+        margin-bottom: 2rem;
+    }
+    header .header-content .social {
+        justify-content: center; /* توسيط أيقونات السوشيال */
+        display: flex;
+    }
+    header .header-content img {
+        margin: 0 auto;
+        max-width: 350px;
+        width: 100%;
+    }
+    
+    /* --- قسم About --- */
+    #about {
+        min-height: auto; 
+        padding: 5rem 0;
+    }
+    #about .about-content {
+        grid-template-columns: 1fr; /* الكلام فوق والبيانات تحت */
+        gap: 2.5rem;
+    }
+    
+    /* --- قسم المهارات --- */
+    #skills .skills-content .row {
+        grid-template-columns: repeat(2, 1fr); /* كارتين في السطر */
+    }
+    
+    /* --- قسم التواصل --- */
+    #contact .row {
+        grid-template-columns: 1fr; /* الصورة فوق والفورم تحت */
+        gap: 2rem;
+        padding: 2rem;
+    }
+}
+
+/* ----------------------------------------------------
+   2. الشاشات الصغيرة (الموبايلات الأقل من 768 بكسل) 
+   ---------------------------------------------------- */
+@media (max-width: 768px) {
+    /* --- شريط التصفح (Navbar) --- */
+    header .navbar nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    header .navbar nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    header .navbar nav ul a {
+        margin: 5px 10px;
+        font-size: 15px;
+    }
+
+    /* --- تصغير العناوين --- */
+    #home .header-content h1 {
+        font-size: 42px;
+    }
+    #about h2, #skills h2, #project h2, #contact h2 {
+        font-size: 32px;
+    }
+
+    /* --- تظبيط أقسام المهارات والمشاريع (كارت واحد في السطر) --- */
+    #skills .skills-content .row,
+    #project .row {
+        grid-template-columns: 1fr; 
+    }
+
+    /* --- تقليل المسافات الفاضية للموبايل --- */
+    #about, #skills, #project, #contact {
+        padding: 4rem 0;
+        min-height: auto; 
+    }
+
+    /* --- حل مشكلة قسم الـ About في الموبايل --- */
+    #about .about-content .col-1 p {
+        text-align: left; /* نلغي الـ Justify عشان المسافات متبقاش وحشة */
+    }
+    #about .about-content .col-2 p {
+        flex-direction: column; /* الاسم والبيانات تحت بعض */
+        align-items: flex-start;
+        gap: 5px;
+        word-break: break-word; /* منع الإيميل من الخروج بره الشاشة */
+    }
+
+    /* --- تصغير خطوط كروت المشاريع --- */
+    #project .row .item .item-content {
+        padding: 1.5rem;
+    }
+    #project .row .item .item-content h3 {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* ----------------------------------------------------
+   3. الموبايلات الصغيرة جداً (أقل من 480 بكسل) 
+   ---------------------------------------------------- */
+@media (max-width: 480px) {
+    #home .header-content h1 {
+        font-size: 34px;
+    }
+    .container {
+        padding: 0 1.5rem; /* بنقلل الهوامش الجانبية عشان ندي مساحة للمحتوى */
+    }
+    #contact .row {
+        padding: 1.5rem; /* بنصغر البوكس بتاع الفورم شوية */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
